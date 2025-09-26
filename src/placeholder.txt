@@ -1,0 +1,4 @@
+# Source Code Directory
+
+This directory is for your main application code.
+Replace this placeholder with your actual source files.

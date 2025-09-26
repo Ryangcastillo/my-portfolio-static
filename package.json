@@ -1,0 +1,172 @@
+{
+  "name": "ryan-castillo-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Ryan Castillo's professional portfolio website showcasing data analytics and business intelligence projects",
+  "author": "Ryan Castillo <ryangcastillo@outlook.com>",
+  "license": "MIT",
+  "keywords": [
+    "portfolio",
+    "react",
+    "data-analytics",
+    "business-intelligence",
+    "power-bi",
+    "python",
+    "sql",
+    "tailwindcss"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryancastillo/portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ryancastillo/portfolio/issues"
+  },
+  "homepage": "https://ryancastillo.dev",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint . --ext js,jsx --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "type-check": "tsc --noEmit",
+    "build:analyze": "vite build --mode analyze",
+    "serve": "vite preview --port 3000",
+    "docker:build": "docker build -t ryan-castillo-portfolio .",
+    "docker:run": "docker run -p 3000:3000 ryan-castillo-portfolio",
+    "deploy": "npm run build && npm run preview",
+    "mcp:test": "node test-mcp.mjs",
+    "mcp:test-postman": "npx @postman/postman-mcp-server --version",
+    "mcp:test-context7": "npx @upstash/context7-mcp --help",
+    "mcp:test-hf": "npx huggingface-mcp-server --version",
+    "mcp:test-github": "npx github-mcp-server --help"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "lucide-react": "^0.294.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^2.0.0"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/server-github": "^2025.4.8",
+    "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
+    "@playwright/mcp": "^0.0.40",
+    "@postman/postman-mcp-server": "^2.3.6",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/user-event": "^14.5.1",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@typescript-eslint/eslint-plugin": "^8.44.1",
+    "@typescript-eslint/parser": "^8.44.1",
+    "@upstash/context7-mcp": "^1.0.18",
+    "@vitejs/plugin-react": "^4.1.1",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.53.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.4",
+    "github-mcp-server": "^1.8.7",
+    "huggingface-mcp-server": "^1.0.26",
+    "jsdom": "^22.1.0",
+    "postcss": "^8.4.31",
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.6",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^34.0.0",
+    "tailwindcss": "^3.3.5",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-pwa": "^0.16.7",
+    "vite-plugin-stylelint": "^5.0.0",
+    "vite-tsconfig-paths": "^4.2.1",
+    "vitest": "^0.34.6"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2020": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "@typescript-eslint/recommended",
+      "plugin:react-hooks/recommended"
+    ],
+    "overrides": [],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "plugins": [
+      "react-refresh"
+    ],
+    "rules": {
+      "react-refresh/only-export-components": [
+        "warn",
+        {
+          "allowConstantExport": true
+        }
+      ]
+    }
+  },
+  "prettier": {
+    "semi": false,
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "printWidth": 100,
+    "tabWidth": 2,
+    "useTabs": false,
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ]
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "at-rule-no-unknown": [
+        true,
+        {
+          "ignoreAtRules": [
+            "tailwind",
+            "apply",
+            "variants",
+            "responsive",
+            "screen",
+            "theme",
+            "config"
+          ]
+        }
+      ],
+      "declaration-block-trailing-semicolon": null,
+      "no-descending-specificity": null
+    }
+  }
+}
