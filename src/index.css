@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom CSS imports */
+@import './styles/variables.css';
+@import './styles/base.css';
+@import './styles/components.css';
+@import './styles/utilities.css';
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

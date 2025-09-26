@@ -1,0 +1,21 @@
+/* Custom CSS variables for portfolio-specific styling */
+
+:root {
+  /* Portfolio brand colors */
+  --portfolio-green-500: #22c55e;
+  --portfolio-green-600: #16a34a;
+  --portfolio-green-700: #15803d;
+  
+  /* Animation durations */
+  --transition-fast: 150ms;
+  --transition-normal: 300ms;
+  --transition-slow: 500ms;
+  
+  /* Custom shadows */
+  --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-card-hover: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  
+  /* Custom spacing */
+  --section-padding: 4rem;
+  --container-max-width: 1200px;
+}

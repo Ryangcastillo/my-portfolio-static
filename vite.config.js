@@ -2,13 +2,11 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import eslint from 'vite-plugin-eslint'
 import path from 'path'
-import tailwindcss from '@tailwindcss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
-    tailwindcss(),
     // Temporarily disabled ESLint to start dev server
     // eslint({
     //   cache: false,
@@ -19,6 +17,12 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
       '~': path.resolve(__dirname, './src'),
+      '@/components': path.resolve(__dirname, './src/components'),
+      '@/data': path.resolve(__dirname, './src/data'),
+      '@/styles': path.resolve(__dirname, './src/styles'),
+      '@/utils': path.resolve(__dirname, './src/utils'),
+      '@/hooks': path.resolve(__dirname, './src/hooks'),
+      '@/services': path.resolve(__dirname, './src/services'),
     },
   },
   server: {

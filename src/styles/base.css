@@ -1,0 +1,60 @@
+/* Base styles and resets */
+
+@layer base {
+  /* Smooth scrolling for the entire page */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Ensure consistent box-sizing */
+  *, 
+  *::before, 
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* Remove default margins and paddings */
+  body, 
+  h1, h2, h3, h4, h5, h6, 
+  p, 
+  figure, 
+  blockquote, 
+  dl, dd {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Set up the body */
+  body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'kern';
+  }
+
+  /* Improve image quality */
+  img, 
+  picture {
+    max-width: 100%;
+    display: block;
+  }
+
+  /* Remove default styles from form elements */
+  input, 
+  button, 
+  textarea, 
+  select {
+    font: inherit;
+  }
+
+  /* Ensure text doesn't overflow */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  /* Focus styles for accessibility */
+  :focus-visible {
+    outline: 2px solid var(--portfolio-green-500);
+    outline-offset: 2px;
+  }
+}
